@@ -7,15 +7,22 @@
 
 function numeroSimetrico(num) {
   // La funcion llamada 'numeroSimetrico' recibe como argumento un numero entero 'num'
-  // Esta devuelve true o false dependiendo de si el número es simétrico o no. 
+  // Esta devuelve true o false dependiendo de si el número es simétrico o no.
   // Un número es simétrico cuando es igual a su reverso.
   // Ej:
   // numeroSimetrico(11711) devuelve true
 
   // Tu código:
-
+  var cadenaOriginal = num.toString();
+  var cadenaInvertida = cadenaOriginal.split("").reverse().join("");
+  if (cadenaOriginal === cadenaInvertida) {
+    return true;
+  } else {
+    return false;
+  }
 }
+console.log(numeroSimetrico(11711));
 
 // No modifiques nada debajo de esta linea //
 
-module.exports = numeroSimetrico
+module.exports = numeroSimetrico;
